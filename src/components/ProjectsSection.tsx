@@ -14,7 +14,7 @@ const projects = [
       "Live AQI & weather viewer using the Weatherbit API for real-time conditions",
       "Enhanced UX with filters, KPI cards, and multi-city pollutant comparisons",
     ],
-    github: "#",
+    github: "https://github.com/devbajaj20",
   },
   {
     title: "Skin Disease Detection",
@@ -27,7 +27,7 @@ const projects = [
       "Built skin type detection using deep learning models",
       "Aiming to deploy as a web app for instant diagnosis and early detection",
     ],
-    github: "#",
+    github: "https://github.com/devbajaj20",
   },
   {
     title: "Flight Finder AI",
@@ -40,7 +40,7 @@ const projects = [
       "Retrieves real-time flight data based on natural language user queries",
       "Enabled faster, more intuitive flight search through dynamic dialogue handling",
     ],
-    github: "#",
+    github: "https://github.com/devbajaj20",
   },
   {
     title: "Library Management System",
@@ -53,7 +53,7 @@ const projects = [
       "Integrated CRUD operations for book inventory, member management, and issue/return tracking",
       "Built intuitive GUI with efficient data validation and real-time updates",
     ],
-    github: "#",
+    github: "https://github.com/devbajaj20",
   },
 ];
 
@@ -86,7 +86,7 @@ const ProjectsSection = () => (
                 </h3>
                 <p className="text-accent text-sm">{project.subtitle}</p>
               </div>
-              <a href={project.github} className="text-muted-foreground hover:text-primary transition-colors">
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github size={20} />
               </a>
             </div>
