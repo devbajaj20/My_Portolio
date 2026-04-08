@@ -71,13 +71,16 @@ const ProjectsSection = () => (
 
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((project, i) => (
-          <motion.div
+          <motion.a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
             key={i}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
-            className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 group"
+            className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 group cursor-pointer block"
           >
             <div className="flex items-start justify-between mb-3">
               <div>
