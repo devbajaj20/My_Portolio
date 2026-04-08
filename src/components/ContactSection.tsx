@@ -43,11 +43,11 @@ const ContactSection = () => {
             </div>
 
             <div className="flex gap-3 pt-4">
-              <a href="https://www.linkedin.com/in/devashish-bajaj/" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/dev-bajaj-a9a586250" target="_blank" rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
                 <Linkedin size={18} />
               </a>
-              <a href="https://github.com/devashishbajaj" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/devbajaj20" target="_blank" rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
                 <Github size={18} />
               </a>

@@ -82,18 +82,20 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 mt-8">
-            <Button className="glow-purple bg-primary hover:bg-primary/80">
-              <Download size={16} />
-              Download Resume
-            </Button>
+            <a href="/Devashish_Bajaj_Resume.pdf" download>
+              <Button className="glow-purple bg-primary hover:bg-primary/80">
+                <Download size={16} />
+                Download Resume
+              </Button>
+            </a>
           </div>
 
           <div className="flex gap-4 mt-8">
             {[
-              { icon: Linkedin, href: "https://www.linkedin.com/in/devashish-bajaj/" },
-              { icon: Github, href: "https://github.com/devashishbajaj" },
-              { icon: Instagram, href: "#" },
-              { icon: Facebook, href: "#" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/dev-bajaj-a9a586250" },
+              { icon: Github, href: "https://github.com/devbajaj20" },
+              { icon: Instagram, href: "https://www.instagram.com/devbajaj001/" },
+              { icon: Facebook, href: "https://www.facebook.com/dev.bajaj.562/" },
             ].map(({ icon: Icon, href }, i) => (
               <a
                 key={i}
