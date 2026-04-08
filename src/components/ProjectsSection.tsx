@@ -14,7 +14,7 @@ const projects = [
       "Live AQI & weather viewer using the Weatherbit API for real-time conditions",
       "Enhanced UX with filters, KPI cards, and multi-city pollutant comparisons",
     ],
-    github: "https://github.com/devbajaj20",
+    github: "https://github.com/devbajaj20/Air-Quality-Analysis",
   },
   {
     title: "Skin Disease Detection",
@@ -27,7 +27,7 @@ const projects = [
       "Built skin type detection using deep learning models",
       "Aiming to deploy as a web app for instant diagnosis and early detection",
     ],
-    github: "https://github.com/devbajaj20",
+    github: "https://github.com/devbajaj20/Dermascan---Skin-Disease-Detection",
   },
   {
     title: "Flight Finder AI",
@@ -40,7 +40,7 @@ const projects = [
       "Retrieves real-time flight data based on natural language user queries",
       "Enabled faster, more intuitive flight search through dynamic dialogue handling",
     ],
-    github: "https://github.com/devbajaj20",
+    github: "https://github.com/devbajaj20/Flight-Finder-AI",
   },
   {
     title: "Library Management System",
@@ -53,7 +53,7 @@ const projects = [
       "Integrated CRUD operations for book inventory, member management, and issue/return tracking",
       "Built intuitive GUI with efficient data validation and real-time updates",
     ],
-    github: "https://github.com/devbajaj20",
+    github: "https://github.com/devbajaj20/Library-Management-System",
   },
 ];
 
