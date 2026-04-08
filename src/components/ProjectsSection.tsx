@@ -14,7 +14,7 @@ const projects = [
       "Live AQI & weather viewer using the Weatherbit API for real-time conditions",
       "Enhanced UX with filters, KPI cards, and multi-city pollutant comparisons",
     ],
-    github: "https://github.com/devbajaj20",
+    github: "https://github.com/devbajaj20/Air-Quality-Analysis",
   },
   {
     title: "Skin Disease Detection",
