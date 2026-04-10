@@ -116,10 +116,10 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(240 10% 4%);
+  background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(265 90% 65% / 0.4);
+  background: hsl(var(--primary) / 0.4);
   border-radius: 3px;
 }
 
