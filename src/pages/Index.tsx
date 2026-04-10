@@ -6,6 +6,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import MoreSection from "@/components/MoreSection";
 import ContactSection from "@/components/ContactSection";
+import Chatbot from "@/components/Chatbot";
 
 const Index = () => (
   <div className="min-h-screen bg-background text-foreground">
@@ -20,6 +21,7 @@ const Index = () => (
     <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
       <p>© 2025 Devashish Bajaj. Built with passion and code.</p>
     </footer>
+    <Chatbot />
   </div>
 );
 
