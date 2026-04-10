@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Download, Linkedin, Github, Instagram, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const roles = [
   "AI/ML Engineer",
