@@ -119,8 +119,8 @@ const HeroSection = () => {
         >
           <div className="relative w-72 h-72 md:w-96 md:h-96">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 blur-3xl" />
-            <div className="relative w-full h-full rounded-full border-2 border-primary/50 overflow-hidden glow-purple flex items-center justify-center bg-card">
-              <span className="text-6xl md:text-8xl font-bold text-primary text-glow-purple">DB</span>
+            <div className="relative w-full h-full rounded-full border-2 border-primary/50 overflow-hidden glow-purple">
+              <img src={profilePhoto} alt="Devashish Bajaj" className="w-full h-full object-cover" />
             </div>
           </div>
         </motion.div>
