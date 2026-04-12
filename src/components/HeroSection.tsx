@@ -119,7 +119,7 @@ const HeroSection = () => {
           <div className="relative w-72 h-72 md:w-96 md:h-96">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 blur-3xl" />
             <div className="relative w-full h-full rounded-full border-2 border-primary/50 overflow-hidden glow-purple bg-card">
-              <img src="/profile-photo.jpeg" alt="Devashish Bajaj" className="w-full h-full object-cover" style={{ objectPosition: '50% 30%' }} />
+              <img src="/profile-photo.jpeg" alt="Devashish Bajaj" className="w-full h-full object-cover" style={{ objectPosition: '50% 20%' }} />
             </div>
           </div>
         </motion.div>
