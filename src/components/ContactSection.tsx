@@ -11,20 +11,41 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.message) {
+
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
       toast.error("Please fill in all fields");
       return;
     }
+
     setSending(true);
+
     try {
       const { data, error } = await supabase.functions.invoke("send-contact", {
-        body: { name: form.name, email: form.email, message: form.message },
+        body: {
+          name: form.name.trim(),
+          email: form.email.trim(),
+          message: form.message.trim(),
+        },
       });
-      if (error) throw error;
-      if (data?.error) throw new Error(data.error);
-      toast.success("Message sent successfully!");
-      setForm({ name: "", email: "", message: "" });
-    } catch (err: any) {
+
+      if (error) {
+        throw error;
+      }
+
+      if (data?.ok) {
+        toast.success("Message sent successfully!");
+        setForm({ name: "", email: "", message: "" });
+        return;
+      }
+
+      if (data?.fallback && data?.mailtoUrl) {
+        toast.info("Opening your email app so you can send the message directly.");
+        window.location.href = data.mailtoUrl as string;
+        return;
+      }
+
+      toast.error(data?.message || "Failed to send message. Please try again.");
+    } catch (err) {
       console.error(err);
       toast.error("Failed to send message. Please try again.");
     } finally {
@@ -45,7 +66,6 @@ const ContactSection = () => {
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -69,12 +89,20 @@ const ContactSection = () => {
             </div>
 
             <div className="flex gap-3 pt-4">
-              <a href="https://www.linkedin.com/in/dev-bajaj-a9a586250" target="_blank" rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
+              <a
+                href="https://www.linkedin.com/in/dev-bajaj-a9a586250"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
+              >
                 <Linkedin size={18} />
               </a>
-              <a href="https://github.com/devbajaj20" target="_blank" rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
+              <a
+                href="https://github.com/devbajaj20"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all"
+              >
                 <Github size={18} />
               </a>
             </div>
@@ -87,7 +115,6 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-          {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -130,9 +157,13 @@ const ContactSection = () => {
               </div>
               <Button type="submit" disabled={sending} className="w-full glow-purple bg-primary hover:bg-primary/80">
                 {sending ? (
-                  <><Loader2 size={18} className="animate-spin mr-2" /> Sending...</>
+                  <>
+                    <Loader2 size={18} className="animate-spin mr-2" /> Sending...
+                  </>
                 ) : (
-                  <><Send size={18} className="mr-2" /> Send Message</>
+                  <>
+                    <Send size={18} className="mr-2" /> Send Message
+                  </>
                 )}
               </Button>
             </form>
